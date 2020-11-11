@@ -6,7 +6,7 @@ const upStrings = () => {
         let code = t.charCodeAt(0);
         console.log("originalcode :",code);
         switch(code) {
-            case (32 || 12288 || 44 || 46): //そのまま 半角32 全角12288　,44 .46
+            case (32 || 12288 || 44 || 46 || 95): //そのまま 半角32 全角12288　,44 .46  _95
                 return code;
             case (97): //a->z
                 return 122;
@@ -29,7 +29,7 @@ const downStrings = () => {
     let newcodes = Array.prototype.map.call(text, (t)=>{
         let code = t.charCodeAt(0);
         switch(code) {
-            case (32 || 12288 || 44 || 46): //そのまま 半角32 全角12288　,44 .46
+            case (32 || 12288 || 44 || 46 || 95): //そのまま 半角32 全角12288　,44 .46 _95
                 return code;
             case (122): //z->a
                 return 97;
